@@ -195,7 +195,7 @@ function generateEditTaskHTML(task) {
                         <img src="../img/check-icon.png" alt="add-icon">
                     </button>
                     <button class="delete-icon-overlay" onclick="showIfDeleteQuestion()">
-                        <img src="../img/trash-9-16.ico">
+                        <img src="../img/trashbin_white.png">
                     </button>
                     <div id="ifToBeDeleted__wrapper" class="ifToBeDeleted__wrapper d-none">
                         <p> Are you sure you want to delete this task? </p>
