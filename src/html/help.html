@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_media.css">
+    <link rel="stylesheet" href="../css/legal_notice.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../img/logo_blue.png" type="image/x-icon">
+
+    <script src="../js/mini_backend.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/board.js"></script>
+    <script defer src="../js/sidebar.js"></script>
+    <script defer src="../js/html_manipulation.js"></script>
+    <title>Join - Help</title>
+</head>
+
+<body onload="init()">
+    <div class="container-fluid mh-100 d-flex flex-column">
+
+        <!-- HEADER START -->
+        <div w3-include-html="../templates/header.html"></div>
+        <!-- HEADER END -->
+
+        <!-- SIDE BAR START -->
+        <div w3-include-html="../templates/sidebar.html"></div>
+        <!-- SIDEBAR END  -->
+
+        <!-- BODY START -->
+        <main class="legalNotice__wrapper">
+            <div>
+                <h1>Help</h1>
+            </div>
+            <div class="legalNotice__back--button">
+                <a onclick="history.back()"><img src="../img/arrow_back.png"></a>
+            </div>
+            <div class="legalNotice__impressum--container">
+                <h2>What is Join?</h1>
+                    <p> <b style="font-size: 1.3rem;">Join</b> is a business oriented tool that focusses on
+                        helping a team (or an individual) to keep track of a Business Project. The application
+                        summarizes the state of all tasks on a "Summary" dashboard. </p>
+                        <p>The "Board" shows all tasks in more detail and sorts them by their status.
+                        When an additional task needs to be added for the team, the Team-Leader has the option to
+                        create a new task via the "Add Task" section or directly within the "Board".</p>  
+                        <p> The section "Contacts" lets the user save individuall contacts and their details.</p>
+
+                    <h2>How to use it</h2>
+                    <ol>
+                        <li>
+                            <ul>
+                                After logging in the user is being welcomed on the summary dashboard by showing all the tasks
+                                registered. A click on any element directs the user to the "Board" section.
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                The "Board" section provides all the tasks in their current state and with the
+                                following options:
+                                <ul><b>- Drag & Drop:</b>  each task to a different progress status lane</ul>
+                                <ul><b>- View:</b>  the details of a task by clicking on it</ul>
+                                <ul><b>- Edit:</b>  the task by clicking on the edit icon in the view card. The user can now modify all details of the task</ul>
+                                <ul><b>- Add:</b>  a new task by clicking the "+" icon in the board or "Add Task" in the sidebar</ul>
+                                <ul><b>- Filter:</b>  all tasks with the search option. All matching tasks will simultaneously be displayed as a result</ul>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                The "Contacts" section allows to store name, email and phone number of each team member. All contacts are available via multiple choice when opening the "Add-task" dialog. For your convenience, you can directly create a new task on the contact detail card and you can choose to edit the details of the contact here.
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                When adding a new task, you have the option to invite a new contact on the fly. This new contact can immediately be assigned. His details, e. g. the phone number or the correct first- and lastname can be edited under "Contacts" ➞ "Edit Contact".
+                            </ul>
+                        </li>
+                    </ol>
+            </div>
+        </main>
+        <!-- BOARD END  -->
+
+    </div>
+
+</body>
+
+</html>
