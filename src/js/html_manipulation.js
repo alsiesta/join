@@ -1,3 +1,6 @@
+let contactsopen = false;
+
+
 /**
  * The function is changing the background color for the start animation
  */
@@ -244,7 +247,7 @@ function clearAddTaskInputFields() {
   document.getElementById("date").value = "";
   document.getElementById(
     "category-dropdown"
-  ).innerHTML = `<span>Select task category</span><img src="../img/select-arrow.png" alt="">`;
+  ).innerHTML = `<span>Select task category</span><img src="../img/select-arrow-down.png" alt="">`;
   document.getElementById("description-text").value = "";
   document.getElementById("subtask-input").value = "";
   document.getElementById("subtask-container").innerHTML = "";
@@ -376,7 +379,7 @@ function toLogOut() {
  */
 function selectCategory(category, color) {
   document.getElementById("category-dropdown").innerHTML = "";
-  document.getElementById("category-dropdown").innerHTML = `<div class="dropdown-category-select">${category}  <div class="category-color ${color}"></div></div><img src="../img/select-arrow.png" alt="">`;
+  document.getElementById("category-dropdown").innerHTML = `<div class="dropdown-category-select">${category}  <div class="category-color ${color}"></div></div><img src="../img/select-arrow-down.png" alt="">`;
   document.getElementById("category-dropdown").classList.add("dropdown-active");
   document.getElementById(color).checked = true;
 }
@@ -419,7 +422,7 @@ function resetAddTaskForm() {
   }
   document.getElementById(
     "category-dropdown"
-  ).innerHTML = `<span>Select task category</span><img src="../img/select-arrow.png" alt="">`;
+  ).innerHTML = `<span>Select task category</span><img src="../img/select-arrow-down.png" alt="">`;
   document.getElementById("category-dropdown").classList.remove("dropdown-active");
 }
 
@@ -433,5 +436,18 @@ function showIfDeleteQuestion() {
     document.getElementById('ifToBeDeleted__wrapper').classList.remove('d-none');
   } else {
     document.getElementById('ifToBeDeleted__wrapper').classList.add('d-none');
+  }
+}
+
+
+function showInitials() {
+  let contactsSelected = [];
+  if (contactsopen == false) {
+    document.getElementById('contact-dropdown-image').src = "../img/select-arrow-down.png";
+    contactsopen = true;
+    contactsSelected = getCheckedBoxes("assign-contacts");
+  } else if (contactsopen == true) {
+    document.getElementById('contact-dropdown-image').src = "../img/select-arrow-left.png";
+    contactsopen = false;
   }
 }

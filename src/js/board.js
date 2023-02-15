@@ -77,6 +77,7 @@ function renderTasks(filter, id) {
  * @param {*} assignedContacts - The name of the person assigned to the task.
  */
 function renderAllAssignedContacts(j, task, assignedContacts) {
+  // debugger
   if (j > 2) {
     document.getElementById(`task-contacts-container${task["id"]}`).lastElementChild.innerHTML =
       generateAssignedContactsMoreThanFourHTML(task["assignedTo"]);

@@ -459,3 +459,12 @@ header {
   width: 76px;
   height: 76px;
 }
+
+#category-dropdown img{
+  width: 14px;
+  height: 14px;
+}
+#contact-dropdown img{
+  width: 14px;
+  height: 14px;
+}

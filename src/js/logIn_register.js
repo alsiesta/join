@@ -35,7 +35,7 @@ function responseValitation(emailUser, passwordUser, findEmail, findPassword) {
     let validation = document.getElementById('logIn__validation');
     if (emailUser != findEmail && passwordUser != findPassword) {
         validation.classList.remove('d-none');
-        validation.innerHTML = 'Wrong email and password'
+        validation.innerHTML = 'Wrong email or password'
     } else if (emailUser === findEmail && passwordUser != findPassword) {
         validation.classList.remove('d-none');
         validation.innerHTML = 'Wrong password';
