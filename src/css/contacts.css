@@ -218,7 +218,7 @@ body {
   height: 100%;
   transform: translateX(100vw);
   transition: all 225ms ease-in-out;
-  z-index: 7;
+  z-index: 3;
 }
 
 
@@ -431,7 +431,7 @@ body {
 
 
 .add-contact-button {
-  z-index: 10;
+  z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -457,7 +457,7 @@ body {
 
 
 .delete-contact-button {
-  z-index: 6;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -678,19 +678,6 @@ input {
 }
 
 
-input[type="text"],
-[type="email"],
-[type="number"] {
-  color: black;
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1px solid #555;
-  outline: none;
-}
-
-
 .form {
   padding-top: 5%;
 }
@@ -766,7 +753,7 @@ input:focus {
 
 
   .sidebar {
-    z-index: 11 !important;
+    z-index: 4 !important;
   }
 
 
@@ -781,7 +768,7 @@ input:focus {
 
 
   header {
-    z-index: 11;
+    z-index: 4;
   }
 
 
@@ -832,7 +819,7 @@ input:focus {
 
   .contact-detail {
     top: 99.99px;
-    z-index: 10;
+    z-index: 3;
     background: white;
     background-color: white;
     position: fixed;
@@ -912,7 +899,7 @@ input:focus {
     bottom: 0px;
     padding: unset;
     background-color: white;
-    z-index: 10;
+    z-index: 4;
   }
 
 
