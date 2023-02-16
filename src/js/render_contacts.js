@@ -6,10 +6,11 @@ function openContactDetail(index) {
   setTimeout(() => {
     document.getElementById("contact-detail").classList.remove("slide-in");
   }, 20);
-
+  renderContactList();  
+  let hover = document.getElementById(`contact-box${index}`);
+  hover.classList.add('contact-box-selected')
   let content = document.getElementById("contact-detail");
   let { email, initials, initialsColor, name, phone } = getContactDetails(index);
-
   content.innerHTML = "";
   content.innerHTML = generateContactDetail(index, name, initials, initialsColor, email, phone);
   setTimeout(() => {
@@ -35,6 +36,7 @@ function showDeleteButton() {
  */
 function slideOut() {
   document.getElementById("contact-detail").classList.remove("slide-in");
+  renderContactList(); 
 }
 
 
@@ -49,7 +51,7 @@ function renderContactList() {
   for (let i = 0; i < activeUserContacts.length; i++) {
     renderRegistery(i, firstLetters);
     content.innerHTML += `
-        <div class="contact-box" onclick="openContactDetail(${i})">
+        <div class="contact-box" id="contact-box${i}" onclick="openContactDetail(${i})">
         <div class="letters" style="background-color: ${activeUserContacts[i]["initialsColor"]}">${activeUserContacts[i]["initials"]}</div>
         <div class="word-break">
         <div>${activeUserContacts[i]["name"]}</div>
@@ -128,6 +130,7 @@ function clearEditContent() {
   document.getElementById("edit-contact-email").value = "";
   document.getElementById("edit-contact-phone").value = "";
 }
+
 
 
 /**

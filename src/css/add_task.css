@@ -504,7 +504,7 @@ input[name="prio"] {
 }
 
 
-body>div.added-task-message>span {
+.added-task-message>span {
     font-weight: 400;
     font-size: 23px;
     line-height: 120%;
@@ -517,6 +517,14 @@ body>div.added-task-message>span {
     transition: all 550ms ease-in-out;
 }
 
+
+.task-added {
+    width: calc(100vw - 518px);
+    text-align: center;
+    margin-block: auto;
+    transform: translateY(110vh);
+    transition: all 225ms ease-in-out;
+  }
 
 .add-task-header-top {
     padding: 0 !important;

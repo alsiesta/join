@@ -359,13 +359,6 @@
   transition: all 225ms ease-in-out;
 }
 
-.task-added {
-  width: calc(100vw - 518px);
-  text-align: center;
-  margin-block: auto;
-  transform: translateY(110vh);
-  transition: all 225ms ease-in-out;
-}
 
 .task-modal-container {
   height: 100%;
@@ -1415,7 +1408,7 @@ input[name="prio"] {
   display: none;
 }
 
-.added-task-message {
+/* .added-task-message {
   z-index: 99;
   width: 326px;
   height: 74px;
@@ -1432,7 +1425,7 @@ input[name="prio"] {
   top: 50%;
   transition: all 550ms ease-in-out;
   transform: translate(-400%);
-}
+} */
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   color: rgba(0, 0, 0, 0);

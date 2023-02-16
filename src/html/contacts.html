@@ -18,7 +18,7 @@
     <script src="../js/mini_backend.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/sidebar.js"></script>
-    <script src="../js/board.js"></script>
+    <!-- <script src="../js/board.js"></script> -->
     <script src="../js/template.js"></script>
     <script src="../js/contacts.js"></script>
     <script src="../js/add_task.js"></script>
@@ -109,9 +109,6 @@
         <!-- MODAL ADD TASK -->
         <div class="add-task-overlay d-none" onclick="closeAddTaskDialog('add-task-modal', 'add-task-overlay')"
             id="add-task-overlay">
-            <div class="task-added d-none" id="task-added">
-                <img src="../img/task-added.png" alt="">
-            </div>
             <div class="add-task-modal" onclick="event.stopPropagation()" id="add-task-modal">
                 <div class="add-task-header-top">
                     <img class="close-icon" src="../img/add-task-close-icon.png"
@@ -119,7 +116,7 @@
                     <div class="add-task-header-bottom">
                         <h2 class="add-task-title" id="exampleModalLabel">Add Task</h2>
                     </div>
-                    <form class="add-task-form" onsubmit="createTask(false); return false;">
+                    <form class="add-task-form" onsubmit="createTask(true); return false;">
                         <button value="submit" type="submit" class="btn-add-task btn-create-task">Create task
                             <img src="../img/check-icon.png" alt="add-icon">
                         </button>
@@ -311,6 +308,9 @@
             </div>
         </main>
         <!-- MAIN END  -->
+        <div id="added-task-message" class="added-task-message"><span>Task added to board</span>
+            <div> <img src="../img/task-added-message-icon.png" alt=""></div>
+        </div>
     </div>
     </div>
 
