@@ -235,7 +235,7 @@ function generateContactEditDialog(index) {
 function generateContactDetail(index, name, initials, initialsColor, email, phone) {
   return `
     <div onclick="slideOut()" class="contact-detail-mobile" id="contact-detail-mobile"><img src="../img/arrow_forward.png" alt=""></div>
-    <span class="span-display-none">Kanban Project Management Tool</span>
+    
     <div class="contact-detail-header">
     <div class="letters-large" style="background-color: ${initialsColor}">${initials}
     </div>

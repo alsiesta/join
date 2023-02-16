@@ -1408,24 +1408,6 @@ input[name="prio"] {
   display: none;
 }
 
-/* .added-task-message {
-  z-index: 99;
-  width: 326px;
-  height: 74px;
-  background: #4589ff;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 20px;
-  position: fixed;
-  top: 50%;
-  transition: all 550ms ease-in-out;
-  transform: translate(-400%);
-} */
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   color: rgba(0, 0, 0, 0);

@@ -329,6 +329,7 @@ function taskAddedToBoard() {
  * The function does remove the confirmation of the task being added.
  */
 function closeTaskAddedToBoard() {
+  debugger
   let taskAdded = document.getElementById("task-added");
   taskAdded.style.transform = "translateX(950px)";
   taskAdded.classList.remove("slide-in-bottom");
@@ -450,7 +451,6 @@ function showInitials() {
     contactsSelected = getCheckedBoxes("assign-contacts");
     for (let i = 0; i < contactsSelected.length; i++) {
       const element = contactsSelected[i];
-      console.log(setColorForInitial(element), getInitials(element));
       initialsContainer.innerHTML += `
       <div style="background-color:${setColorForInitial(element)}" class="task-contacts">${getInitials(element)}</div>
       `;
@@ -461,10 +461,10 @@ function showInitials() {
     contactsopen = false;
     for (let i = 0; i < contactsSelected.length; i++) {
       const element = contactsSelected[i];
-      console.log(setColorForInitial(element), getInitials(element));
       initialsContainer.innerHTML += `
       <div style="background-color:${setColorForInitial(element)}" class="task-contacts">${getInitials(element)}</div>
       `;
     }
+    // document.getElementById('collapseContacts').classList.remove('show')
   }
 }

@@ -468,3 +468,43 @@ header {
   width: 14px;
   height: 14px;
 }
+
+.added-task-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  width: 326px;
+  height: 74px;
+  background: #4589FF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 0px;
+  gap: 20px;
+  position: fixed;
+  bottom: calc(-12%);
+right: 50px;
+  transition: all 550ms ease-in-out;
+  /* transform: translateY(500%); */
+}
+
+.added-task-message>span {
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.task-added-animation {
+  transform: translateY(-500%);
+  transition: all 350ms ease-in-out;
+}
+
+.task-added {
+  width: calc(100vw - 518px);
+  text-align: center;
+  margin-block: auto;
+  transform: translateY(110vh);
+  transition: all 225ms ease-in-out;
+}

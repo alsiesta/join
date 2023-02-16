@@ -35,7 +35,6 @@ function getTodaysDate() {
   let month = getMonthNr(date);
   let year = date.getFullYear();
   let today = year + "-" + month + "-" + day;
-  console.log(typeof today);
   document.getElementById("date").setAttribute("min", today);
 }
 
@@ -392,12 +391,13 @@ async function createNewTask(taskID, category, title, description, contactsCheck
   new CreateTask(taskID, category, title, description, contactsCheckedBoxes, urgency, date, color, subtasks);
   await saveInBackendUserTasks(tasks.length);
   addToBoard();
-  taskAddedToBoard();
+  taskAddedAnimation();
+  // taskAddedToBoard();
   setTimeout(() => {
     closeAddTaskDialog("add-task-modal", "add-task-overlay");
-    closeTaskAddedToBoard();
+    // closeTaskAddedToBoard();
     resetAddTaskForm();
-  }, 2000);
+  }, 1500);
 }
 
 
@@ -417,6 +417,10 @@ async function addTaskCreateTask(taskID, category, title, description, contactsC
   await saveInBackendUserTasks(tasks.length);
   addToBoard();
   taskAddedAnimation();
+  setTimeout(() => {
+    closeAddTaskDialog("add-task-modal", "add-task-overlay");
+    resetAddTaskForm();
+  }, 1500);
 }
 
 

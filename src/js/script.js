@@ -77,7 +77,7 @@ async function getActiveUser() {
     activeUser = await JSON.parse(stringStorage);
     activeUser.quickAcces = true;
   } else if (localStorage.getItem("activeUser") === null) {
-    console.log("No Local Storage");
+    // console.log("No Local Storage");
     await setActiveUser(collectActiveUserFromURL())
     await saveLocalActiveUser(activeUser)
   }
@@ -170,7 +170,7 @@ async function executeDeleteContacts() {
   activeUserContacts = [];
   document.getElementById("contact-list").innerHTML = "";
   document.getElementById("contact-detail").innerHTML = "";
-  console.log("Deleted all contacts of: ", activeUserEmail);
+  // console.log("Deleted all contacts of: ", activeUserEmail);
 }
 
 
@@ -199,10 +199,10 @@ async function logInUser() {
   let emailUser = document.getElementById("email").value;
   let passwordUser = document.getElementById("password").value;
   let acces = await checkIfExists(emailUser, passwordUser);
-  console.log("Log In Before:", activeUser);
+  // console.log("Log In Before:", activeUser);
   await checkIfRmemberMe(emailUser);
   goToSummary(acces, emailUser); // goes to login-register.js line 154 to pass email with url
-  console.log("Log In After:", activeUser);
+  // console.log("Log In After:", activeUser);
   emailUser.value = "";
   passwordUser = "";
 }
@@ -248,7 +248,6 @@ async function getActiveUserURL(emailUser) {
   let params = new URLSearchParams();
   params.append("first", first);
   params.append("second", JSON.stringify(second));
-  console.log(params)
   return params;
 }
 

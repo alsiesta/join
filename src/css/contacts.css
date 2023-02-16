@@ -24,7 +24,7 @@ body {
 
 
 .span-display-none {
-  display: none;
+  display: none!important;
 }
 
 
@@ -57,41 +57,6 @@ body {
   height: calc(100vh - 100px);
   padding: 10px;
   overflow-y: auto;
-}
-
-
-.added-task-message {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  z-index: 99;
-  width: 326px;
-  height: 74px;
-  background: #4589FF;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  padding: 0px;
-  gap: 20px;
-  position: fixed;
-  bottom: calc(-12%);
-right: 50px;
-  transition: all 550ms ease-in-out;
-  /* transform: translateY(500%); */
-}
-
-
-.added-task-message>span {
-  font-weight: 400;
-  font-size: 23px;
-  line-height: 120%;
-  color: #FFFFFF;
-}
-
-
-.task-added-animation {
-  transform: translateY(-500%);
-  transition: all 350ms ease-in-out;
 }
 
 
@@ -716,6 +681,17 @@ input {
   outline-color: #e8e8e8;
 }
 
+input[type="text"],
+[type="email"],
+[type="number"] {
+  color: black;
+  width: 100%;
+  padding: 0px 0px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
 
 .contact-form-control {
   font-size: 1.2rem !important;
@@ -876,7 +852,7 @@ input:focus {
 
 
   .contact-detail {
-    top: 99.99px;
+    top: 170px;
     z-index: 3;
     background: white;
     background-color: white;
