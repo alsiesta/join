@@ -863,9 +863,9 @@ input:focus {
   }
 
 
-  .edit-contact {
+  /* .edit-contact {
     display: none;
-  }
+  } */
 
 
   .edit-contact-responsive {
@@ -968,7 +968,7 @@ input:focus {
 
   .menu {
     flex-direction: row;
-    gap: unset;
+    gap: 5vw;
   }
 
 
@@ -1071,7 +1071,10 @@ input:focus {
     font-size: 24px;
   }
 
-
+  .menu {
+    gap: unset;
+  }
+  
   .letters-large {
     min-width: 60px;
     min-height: 60px;
