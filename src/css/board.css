@@ -252,6 +252,13 @@
 
 .task-contacts-container {
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.assigned-initials{
+  width: 50%;
 }
 
 .task-contacts {

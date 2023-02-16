@@ -254,6 +254,8 @@ function generateTemplate() {
  * @param {*} taskID
  */
 function openAddTaskDialog(id, id2, taskID) {
+  let initialsContainer = document.getElementById('task-contacts-container');
+  initialsContainer.innerHTML = '';
   document.getElementById(id).classList.remove("d-none");
   renderContactsInDropDown();
   setTimeout(() => {

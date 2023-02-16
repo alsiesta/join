@@ -442,12 +442,29 @@ function showIfDeleteQuestion() {
 
 function showInitials() {
   let contactsSelected = [];
+  let initialsContainer = document.getElementById('task-contacts-container');
+  initialsContainer.innerHTML = '';
   if (contactsopen == false) {
     document.getElementById('contact-dropdown-image').src = "../img/select-arrow-down.png";
     contactsopen = true;
     contactsSelected = getCheckedBoxes("assign-contacts");
+    for (let i = 0; i < contactsSelected.length; i++) {
+      const element = contactsSelected[i];
+      console.log(setColorForInitial(element), getInitials(element));
+      initialsContainer.innerHTML += `
+      <div style="background-color:${setColorForInitial(element)}" class="task-contacts">${getInitials(element)}</div>
+      `;
+    }
   } else if (contactsopen == true) {
     document.getElementById('contact-dropdown-image').src = "../img/select-arrow-left.png";
+    contactsSelected = getCheckedBoxes("assign-contacts");
     contactsopen = false;
+    for (let i = 0; i < contactsSelected.length; i++) {
+      const element = contactsSelected[i];
+      console.log(setColorForInitial(element), getInitials(element));
+      initialsContainer.innerHTML += `
+      <div style="background-color:${setColorForInitial(element)}" class="task-contacts">${getInitials(element)}</div>
+      `;
+    }
   }
 }
