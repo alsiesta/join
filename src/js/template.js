@@ -136,7 +136,7 @@ function generateEditTaskHTML(task) {
                         <textarea class="edit-description" name="" id="edit-description${task["id"]}" cols="30" rows="5" placeholder="Enter a Description">${task["description"]}</textarea>
                     </div>
                     <div class="task-process-main-div">
-                        <span class="category-header">Task Process-Status</span>
+                        <span class="category-header">Change the Task Process-Status</span>
                         <select class="tasks_moveTo" id="tasks_moveTo" value="Move"></select>
                     </div>
                     <div class="date-area flex-column margin-btn-45">
