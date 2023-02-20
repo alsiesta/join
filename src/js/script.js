@@ -199,10 +199,9 @@ async function logInUser() {
   let emailUser = document.getElementById("email").value;
   let passwordUser = document.getElementById("password").value;
   let acces = await checkIfExists(emailUser, passwordUser);
-  // console.log("Log In Before:", activeUser);
+
   await checkIfRmemberMe(emailUser);
   goToSummary(acces, emailUser); // goes to login-register.js line 154 to pass email with url
-  // console.log("Log In After:", activeUser);
   emailUser.value = "";
   passwordUser = "";
 }
@@ -219,9 +218,6 @@ async function logInByQuickAcces() {
   if (activeUser.quickAcces == true) {
     document.getElementById('email').value = activeUser.userEmail;
     document.getElementById('password').value = activeUser.userPassword;
-    // let acces = activeUser.quickAcces;
-    // let emailUser = activeUser.emailUser;
-    // goToSummary(acces, emailUser);
   }
 }
 
