@@ -456,7 +456,7 @@ function showInitials() {
       `;
     }
   } else if (contactsopen == true) {
-    document.getElementById('contact-dropdown-image').src = "../img/select-arrow-left.png";
+    document.getElementById('contact-dropdown-image').src = "../img/select-arrow-down.png";
     contactsSelected = getCheckedBoxes("assign-contacts");
     contactsopen = false;
     for (let i = 0; i < contactsSelected.length; i++) {
@@ -465,6 +465,5 @@ function showInitials() {
       <div style="background-color:${setColorForInitial(element)}" class="task-contacts">${getInitials(element)}</div>
       `;
     }
-    // document.getElementById('collapseContacts').classList.remove('show')
   }
 }

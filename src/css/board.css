@@ -1237,9 +1237,10 @@ input[type="checkbox"]:checked {
   background: #ffffff;
   border: 1px solid #647188;
   border-radius: 10px;
-  width: 136px;
+  width: 116px;
   height: 61px;
-  margin-right: 25px;
+  margin-right: 15px;
+  margin-left:15px;
 }
 
 .add-task-right-button-left:hover {
